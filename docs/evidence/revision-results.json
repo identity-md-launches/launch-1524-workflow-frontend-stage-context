@@ -1,0 +1,509 @@
+{
+  "finding": "7f22d638bae33086620c551f66da3dfcc476fd50d1754a9ac2778bc61dc7b43d",
+  "before": {
+    "manifestSha256": "37c46f082f246f24ddfd6f8c33ce78e8ae14b8dcbcb93aed2e4c16b0d880f4f3",
+    "engineVersions": {
+      "chromium": "156.0.8078.4"
+    },
+    "observations": [
+      {
+        "engine": "chromium",
+        "width": 390,
+        "handoffs": 7,
+        "fee": "1229873865424870000000",
+        "bounty": "13831231090414500000000",
+        "actionTop": 772.59375,
+        "actionHeight": 44,
+        "actionBottom": 816.59375,
+        "liveBarTop": 805
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "handoffs": 15,
+        "fee": "1557967416600764580520",
+        "bounty": "19299456943346076342038",
+        "actionTop": 772.59375,
+        "actionHeight": 64,
+        "actionBottom": 836.59375,
+        "liveBarTop": 805
+      }
+    ],
+    "results": [
+      {
+        "engine": "chromium",
+        "name": "worker-full-precision-approval-7",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: full-precision approval above live bar after 7 handoffs; bottom=816.59375, bar=805"
+      },
+      {
+        "engine": "chromium",
+        "name": "worker-full-precision-approval-15",
+        "passed": false,
+        "error": "AssertionError [ERR_ASSERTION]: full-precision approval above live bar after 15 handoffs; bottom=836.59375, bar=805"
+      }
+    ]
+  },
+  "after": {
+    "manifestSha256": "4fd751d9b83585829a8d78f3973fd844fe9f836812b1ac9d466872446519e6a3",
+    "finishedAt": "2026-10-13T07:42:52.639Z",
+    "engineVersions": {
+      "chromium": "156.0.8078.4",
+      "webkit": "27.2"
+    },
+    "observations": [
+      {
+        "engine": "chromium",
+        "width": 390,
+        "handoffs": 7,
+        "fee": "1229873865424870000000",
+        "bounty": "13831231090414500000000",
+        "actionTop": 752.59375,
+        "actionHeight": 44,
+        "actionBottom": 796.59375,
+        "liveBarTop": 805
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "handoffs": 15,
+        "fee": "1557967416600764580520",
+        "bounty": "19299456943346076342038",
+        "actionTop": 752.59375,
+        "actionHeight": 44,
+        "actionBottom": 796.59375,
+        "liveBarTop": 805
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "actionBottom": 748.59375,
+        "liveBarTop": 805
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "handoffs": 7,
+        "fee": "1229873865424870000000",
+        "bounty": "13831231090414500000000",
+        "actionTop": 752.59375,
+        "actionHeight": 44,
+        "actionBottom": 796.59375,
+        "liveBarTop": 805
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "handoffs": 15,
+        "fee": "1557967416600764580520",
+        "bounty": "19299456943346076342038",
+        "actionTop": 752.59375,
+        "actionHeight": 44,
+        "actionBottom": 796.59375,
+        "liveBarTop": 805
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "actionBottom": 748.59375,
+        "liveBarTop": 805
+      }
+    ],
+    "results": [
+      {
+        "engine": "chromium",
+        "name": "disconnected-mobile-and-missing-wallet",
+        "passed": true,
+        "durationMs": 1958
+      },
+      {
+        "engine": "chromium",
+        "name": "unknown-chain-add-and-switch",
+        "passed": true,
+        "durationMs": 1661
+      },
+      {
+        "engine": "chromium",
+        "name": "connection-rejection-retry",
+        "passed": true,
+        "durationMs": 1513
+      },
+      {
+        "engine": "chromium",
+        "name": "open-approval-and-confirmed-refresh",
+        "passed": true,
+        "durationMs": 2451
+      },
+      {
+        "engine": "chromium",
+        "name": "worker-full-precision-approval-7",
+        "passed": true,
+        "durationMs": 2727
+      },
+      {
+        "engine": "chromium",
+        "name": "worker-full-precision-approval-15",
+        "passed": true,
+        "durationMs": 2552
+      },
+      {
+        "engine": "chromium",
+        "name": "worker-recipient-validation-handoff",
+        "passed": true,
+        "durationMs": 2382
+      },
+      {
+        "engine": "chromium",
+        "name": "queue-join-leave-no-rejoin",
+        "passed": true,
+        "durationMs": 2846
+      },
+      {
+        "engine": "chromium",
+        "name": "expired-timeout-and-closed-state",
+        "passed": true,
+        "durationMs": 1899
+      },
+      {
+        "engine": "chromium",
+        "name": "claim-past-run-once",
+        "passed": true,
+        "durationMs": 1725
+      },
+      {
+        "engine": "chromium",
+        "name": "owner-one-time-setup",
+        "passed": true,
+        "durationMs": 1638
+      },
+      {
+        "engine": "chromium",
+        "name": "signature-rejection-and-contract-revert",
+        "passed": true,
+        "durationMs": 2211
+      },
+      {
+        "engine": "chromium",
+        "name": "queue-row-one-tap-handoff",
+        "passed": true,
+        "durationMs": 1921
+      },
+      {
+        "engine": "chromium",
+        "name": "pagination-retention-and-specific-bounty",
+        "passed": true,
+        "durationMs": 2943
+      },
+      {
+        "engine": "chromium",
+        "name": "stale-bounty-response-after-account-change",
+        "passed": true,
+        "durationMs": 2688
+      },
+      {
+        "engine": "chromium",
+        "name": "token-transfer-validation-and-account-change",
+        "passed": true,
+        "durationMs": 2318
+      },
+      {
+        "engine": "chromium",
+        "name": "deployment-code-and-rpc-failure-gates",
+        "passed": true,
+        "durationMs": 2581
+      },
+      {
+        "engine": "chromium",
+        "name": "failed-worker-has-no-claim",
+        "passed": true,
+        "durationMs": 1429
+      },
+      {
+        "engine": "chromium",
+        "name": "buy-quote-two-approvals-and-swap",
+        "passed": true,
+        "durationMs": 2886
+      },
+      {
+        "engine": "chromium",
+        "name": "sell-validation-quote-invalidation",
+        "passed": true,
+        "durationMs": 3365
+      },
+      {
+        "engine": "chromium",
+        "name": "rendered-accessibility-layout-and-keyboard",
+        "passed": true,
+        "durationMs": 6433
+      },
+      {
+        "engine": "webkit",
+        "name": "disconnected-mobile-and-missing-wallet",
+        "passed": true,
+        "durationMs": 2564
+      },
+      {
+        "engine": "webkit",
+        "name": "unknown-chain-add-and-switch",
+        "passed": true,
+        "durationMs": 1941
+      },
+      {
+        "engine": "webkit",
+        "name": "connection-rejection-retry",
+        "passed": true,
+        "durationMs": 1880
+      },
+      {
+        "engine": "webkit",
+        "name": "open-approval-and-confirmed-refresh",
+        "passed": true,
+        "durationMs": 2869
+      },
+      {
+        "engine": "webkit",
+        "name": "worker-full-precision-approval-7",
+        "passed": true,
+        "durationMs": 3748
+      },
+      {
+        "engine": "webkit",
+        "name": "worker-full-precision-approval-15",
+        "passed": true,
+        "durationMs": 4089
+      },
+      {
+        "engine": "webkit",
+        "name": "worker-recipient-validation-handoff",
+        "passed": true,
+        "durationMs": 2881
+      },
+      {
+        "engine": "webkit",
+        "name": "queue-join-leave-no-rejoin",
+        "passed": true,
+        "durationMs": 3122
+      },
+      {
+        "engine": "webkit",
+        "name": "expired-timeout-and-closed-state",
+        "passed": true,
+        "durationMs": 2541
+      },
+      {
+        "engine": "webkit",
+        "name": "claim-past-run-once",
+        "passed": true,
+        "durationMs": 2327
+      },
+      {
+        "engine": "webkit",
+        "name": "owner-one-time-setup",
+        "passed": true,
+        "durationMs": 2534
+      },
+      {
+        "engine": "webkit",
+        "name": "signature-rejection-and-contract-revert",
+        "passed": true,
+        "durationMs": 3023
+      },
+      {
+        "engine": "webkit",
+        "name": "queue-row-one-tap-handoff",
+        "passed": true,
+        "durationMs": 2477
+      },
+      {
+        "engine": "webkit",
+        "name": "pagination-retention-and-specific-bounty",
+        "passed": true,
+        "durationMs": 4218
+      },
+      {
+        "engine": "webkit",
+        "name": "stale-bounty-response-after-account-change",
+        "passed": true,
+        "durationMs": 3467
+      },
+      {
+        "engine": "webkit",
+        "name": "token-transfer-validation-and-account-change",
+        "passed": true,
+        "durationMs": 2732
+      },
+      {
+        "engine": "webkit",
+        "name": "deployment-code-and-rpc-failure-gates",
+        "passed": true,
+        "durationMs": 3438
+      },
+      {
+        "engine": "webkit",
+        "name": "failed-worker-has-no-claim",
+        "passed": true,
+        "durationMs": 1853
+      },
+      {
+        "engine": "webkit",
+        "name": "buy-quote-two-approvals-and-swap",
+        "passed": true,
+        "durationMs": 3481
+      },
+      {
+        "engine": "webkit",
+        "name": "sell-validation-quote-invalidation",
+        "passed": true,
+        "durationMs": 2737
+      },
+      {
+        "engine": "webkit",
+        "name": "rendered-accessibility-layout-and-keyboard",
+        "passed": true,
+        "durationMs": 6971
+      }
+    ],
+    "axe": {
+      "chromium": {
+        "violations": 0,
+        "tags": [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21aa",
+          "wcag22aa"
+        ]
+      },
+      "webkit": {
+        "violations": 0,
+        "tags": [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21aa",
+          "wcag22aa"
+        ]
+      }
+    }
+  },
+  "taste": {
+    "mode": "offline",
+    "checks": [
+      {
+        "name": "render",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 11287,
+        "output": "renders, no script errors or missing local files\nexternal hosts: ethereum-rpc.publicnode.com, eth.drpc.org"
+      },
+      {
+        "name": "layout",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "no horizontal scroll at 320, 390 or 1440\nno text box overlaps another\nno floating control covers text\nno text cut off by overflow: hidden"
+      },
+      {
+        "name": "targets",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "all 25 controls at least 24px or spaced at 390\n6 under the 44px comfortable size"
+      },
+      {
+        "name": "contrast",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "all measured text meets 4.5:1 (3:1 large)"
+      },
+      {
+        "name": "casing",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 1,
+        "output": "12 all-caps text boxes in content:\n1440px: #main > div.hero:nth-of-type(1) > div.failure-stamp:nth-of-type(2) \"Verification failed\" (text-transform)\n1440px: #job > div.job-heading:nth-of-type(1) > span.status-badge \"Reads unavailable\" (text-transform)\n1440px: #job > div.job-body:nth-of-type(2) > div.clock-block > span.label \"Time to hand off\" (text-transform)\n1440px: div.job-body:nth-of-type(2) > div.clock-block > div.current-worker:nth-of-type(2) > span.label:nth-of-type(1) \"Current worker\" (text-transform)\n1440px: div.job-body:nth-of-type(2) > dl.job-metrics > div:nth-of-type(1) > dt \"Bounty\" (text-transform)\n1440px: div.job-body:nth-of-type(2) > dl.job-metrics > div:nth-of-type(2) > dt \"Attempts\" (text-transform)\n1440px: div.job-body:nth-of-type(2) > dl.job-metrics > div:nth-of-type(3) > dt \"Next handoff\" (text-transform)\n1440px: div.job-body:nth-of-type(2) > dl.job-metrics > div:nth-of-type(4) > dt \"Fee growth\" (text-transform)\n… 4 more\n2 more in header, nav or footer (brand chrome, not counted)"
+      },
+      {
+        "name": "tracking",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "letter-spacing natural in content (display type may run tight)"
+      },
+      {
+        "name": "eyebrows",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 1,
+        "output": "2 kicker labels above headings:\n390px: \"imd\" above \"JOB #0\" (div > header.site-header > a.brand > span)\n1440px: \"Fee growth\" above \"+3%\" (div.job-body:nth-of-type(2) > dl.job-metrics > div:nth-of-type(4) > dt)"
+      },
+      {
+        "name": "type-sizes",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "390: 5 sizes in use, 6 with one-offs (12px×46, 14px×28, 16px×5, 20px×6, 32px×4, 56px×1)\n1440: 5 sizes in use, 6 with one-offs (12px×36, 14px×37, 16px×7, 20px×7, 32px×4, 56px×1)\nbar: 6 sizes used more than once, 8 counting one-offs, per width"
+      },
+      {
+        "name": "type-faces",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 0,
+        "output": "families (1): sfmono-regular\nweights (2): 400, 700\nmonospace prose: 11, e.g. #main > p.notice.error \"Live reads are unavailable. Retry, or co\""
+      },
+      {
+        "name": "glyphs",
+        "passed": false,
+        "exitCode": 1,
+        "durationMs": 1,
+        "output": "1 em dashes:\n#queue > div.section-header > span.muted \"— online\"\n"
+      },
+      {
+        "name": "slogans",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "1 two-beat lines; a stack is four or more, so keep the best and cut the rest:\n\"Every job gets finished. Except this one.\" (#main > div.hero:nth-of-type(1) > div:nth-of-type(1) > p)"
+      },
+      {
+        "name": "repetition",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 2,
+        "output": "no repeated lines"
+      },
+      {
+        "name": "copy-budget",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 1,
+        "output": "prose on the first screen: 34 words at 390 (bar 60), 41 at 1440 (bar 90)\nall words on the first screen: 91 at 390, 104 at 1440\nwhole page: 439 words, 207 of them prose"
+      },
+      {
+        "name": "chrome",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "border and shadow together: 0\ncards inside cards: 0\ngradient text: 0"
+      },
+      {
+        "name": "motion",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "transition: all on 0 elements\nendless animations: 2; still running with reduced motion: 0"
+      },
+      {
+        "name": "share",
+        "passed": true,
+        "exitCode": 0,
+        "durationMs": 0,
+        "output": "title \"JOB #0 — The job no agent could finish\", favicon, og:title, og:image, description"
+      }
+    ]
+  },
+  "limitations": [
+    "All wallet and RPC interaction checks are mocked; no live transaction was broadcast.",
+    "No fresh live-chain reads or publication checks were performed for this layout revision.",
+    "Physical devices, native screen readers, browser-native zoom, RTL and OS forced colors were not tested."
+  ]
+}

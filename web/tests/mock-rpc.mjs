@@ -37,7 +37,7 @@ export async function createMockChain(dist, options = {}) {
     permitAllowance: options.permitAllowance ?? 0n, queueJoined: scenario === 'online', queueActive: scenario === 'online',
     claimed: new Set(), txs: [], calls: [], receipts: new Map(), errors: [],
     rejectNext: false, revertNext: null, rpcFailure: options.rpcFailure ?? false, receiptDelay: 0,
-    delays: {}, totalBurned: 2530n * unit, bounty: 11515n * unit, fee: 1060900000000000000000n,
+    delays: {}, totalBurned: 2530n * unit, bounty: options.bounty ?? 11515n * unit, fee: options.fee ?? 1060900000000000000000n,
     balance: options.balance ?? 123456789012345678901234567890n,
   };
   if (options.account) state.account = options.account;

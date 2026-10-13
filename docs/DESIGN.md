@@ -43,6 +43,8 @@ The working breakpoints are 1240px, 860px, 660px and 359px. Below 1240px the con
 
 The fixed live bar has bottom safe-area padding and a reserved 100–112px page-bottom space. At mobile widths it displays online workers, attempts and burned TEYO in a wrapping row. Wallet disclosure width is capped at the viewport minus 32px; full addresses break across lines. Fields use `min-width: 0`; metric/grid columns use `minmax(0, 1fr)`.
 
+Below 660px, the assignment uses a 6px internal gap. Paid actions use the concise “Approve TEYO” label while their adjacent explanation and metrics retain the exact fee. With seven- and fifteen-handoff fee growth, the 44px approval button stays above the live bar on the first 390×844 screen in both tested engines; see `docs/frontend-revision.md`.
+
 Production exports were checked at 320, 390, 768 and 1440 CSS pixels in Chromium and WebKit, including an open wallet disclosure at 320px and large token balances. Results and explicit limitations are in `docs/frontend-validation.md`.
 
 ## Elevation & Depth

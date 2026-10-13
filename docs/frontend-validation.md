@@ -1,5 +1,7 @@
 # JOB #0 frontend validation
 
+The mobile full-precision approval revision is documented in [frontend-revision.md](frontend-revision.md), including the current export hash and 42 browser results. The initial-delivery evidence below is retained as historical evidence; the revision report supersedes its final-export measurements and check counts.
+
 This is worker-produced evidence for the static frontend. It is not an independent contract audit or the control plane's publication verification. The frontend is built in `web/` and exported to `dist/`; no contract source or deployment was changed. All interaction transactions described below use intercepted JSON-RPC and a deterministic browser-wallet fixture. No funded wallet, signature, approval or swap was broadcast to Ethereum.
 
 ## Scope and consequential assumptions

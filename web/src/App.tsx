@@ -170,7 +170,7 @@ function Explorer({ config }: { config: RuntimeConfig }) {
       if (kind === 'handoff') {
         void (async () => { const valid = await checkRecipient(to ?? recipient); if (valid) await submit(paidAction(kind, cost, label, [valid])); })();
       } else void submit(paidAction(kind, cost, label));
-    }}>{pending ? `${tx.label} · ${tx.phase === 'wallet' ? 'Confirm in wallet…' : 'Pending…'}` : approve ? `Approve ${tokens(cost, state?.decimals, state?.decimals ?? 18)} TEYO` : label}<span aria-hidden="true"> ↗</span></button>{lowBalance && <small className="error">You need {tokens(cost - state!.balance!, state?.decimals)} more TEYO. <a href="#trade">Get TEYO</a>.</small>}{approve && !pending && <small className="muted">Step 1: allow JobZero to spend this exact fee. Step 2: {label.toLowerCase()}.</small>}</div>;
+    }}>{pending ? `${tx.label} · ${tx.phase === 'wallet' ? 'Confirm in wallet…' : 'Pending…'}` : approve ? 'Approve TEYO' : label}<span aria-hidden="true"> ↗</span></button>{lowBalance && <small className="error">You need {tokens(cost - state!.balance!, state?.decimals)} more TEYO. <a href="#trade">Get TEYO</a>.</small>}{approve && !pending && <small className="muted">Step 1: allow JobZero to spend this exact fee. Step 2: {label.toLowerCase()}.</small>}</div>;
   }
   const simpleAction = (key: string, label: string, functionName: string, args: readonly unknown[] = [], disabled = false) => <button className="button" disabled={!canTransact || !configured || busy || disabled} onClick={() => void submit({ key, label, functionName, args, expectedRun: functionName === 'claim' ? undefined : state?.currentRun })}>{activePhase && tx.key === key ? `${label} · Pending…` : label}</button>;
   async function checkClaim() {

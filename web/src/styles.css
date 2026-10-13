@@ -250,7 +250,7 @@ label input { margin-top: 0; }
   .main-action p { font-size: var(--text-xs); }
   .main-action .button, .action-control { width: 100%; }
   .assignment h3 { font-size: var(--text-sm); }
-  .assignment { gap: 10px; }
+  .assignment { gap: 6px; }
   .record-bottom { padding-inline: 12px; }
   .record-bottom > span { font-size: var(--text-xs); }
   .job-panel { margin-bottom: 24px; }

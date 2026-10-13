@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 import { resolve, extname, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createMockChain, fixtureWallets, installWallet } from './mock-rpc.mjs';
-import { decodeAbiParameters, parseAbiParameters } from 'viem';
+import { decodeAbiParameters, formatUnits, parseAbiParameters } from 'viem';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const sourceDist = resolve(root, 'dist');
@@ -117,6 +117,41 @@ const cases = [
     assert.equal(chain.state.txs[1].to.toLowerCase(), chain.deployed.JobZero.address.toLowerCase());
     await visible(page.getByText('JOB #0 IS ASSIGNED TO YOU', { exact: true }));
   })],
+  ...[7, 15].map(handoffs => [`worker-full-precision-approval-${handoffs}`, async (browser, engine) => {
+    let fee = 1000n * unit; let bounty = 10000n * unit;
+    for (let i = 0; i < handoffs; i++) { bounty += fee - fee / 2n; fee += fee * 3n / 100n; }
+    await session(browser, { scenario: 'worker', allowance: 0n, attemptCount: handoffs + 1, fee, bounty }, async (page, chain) => {
+      await connect(page);
+      const action = page.getByTestId('action-handoff');
+      await until(async () => await action.count() && await action.isEnabled(), 'worker approval ready');
+      assert.equal(await page.evaluate(() => scrollY), 0, 'measure the first screen without scrolling');
+      const rect = await action.boundingBox();
+      const bar = await page.locator('.live-bar').boundingBox();
+      observations.push({ engine, width: 390, handoffs, fee: fee.toString(), bounty: bounty.toString(), actionTop: rect.y, actionHeight: rect.height, actionBottom: rect.y + rect.height, liveBarTop: bar.y });
+      const shot = `${engine}-worker-${handoffs}-handoffs-390.png`;
+      await page.screenshot({ path: resolve(output, shot), fullPage: false }); artifacts.push(shot);
+      assert.ok(rect.y + rect.height <= bar.y, `full-precision approval above live bar after ${handoffs} handoffs; bottom=${rect.y + rect.height}, bar=${bar.y}`);
+      assert.equal(await action.getAttribute('aria-label'), null, 'visible copy supplies the accessible name');
+      assert.match(await action.innerText(), /^Approve TEYO/);
+      const exactFee = formatUnits(fee, 18);
+      const exactBounty = formatUnits(bounty, 18);
+      for (const width of [320, 390, 1440]) {
+        await page.setViewportSize({ width, height: 844 }); await noOverflow(page);
+        for (const [selector, amount] of [['.assignment p .token-amount', exactFee], ['.job-metrics > div:nth-child(3) .token-amount', exactFee], ['.job-metrics > div:first-child .token-amount', exactBounty]]) {
+          const value = page.locator(selector);
+          assert.equal(await value.getAttribute('title'), `${amount} TEYO`);
+          assert.equal((await value.innerText()).replaceAll(',', ''), `${amount} TEYO`, 'exact amount remains in visible text');
+        }
+      }
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.getByLabel(/Next worker/).fill(fixtureWallets.recipient);
+      await action.click(); await txDone(chain, 'approve');
+      assert.equal(chain.state.txs[0].args[0].toLowerCase(), chain.deployed.JobZero.address.toLowerCase());
+      assert.equal(chain.state.txs[0].args[1], fee, 'concise approval still authorizes the exact fee');
+      await button(page, /Hand off JOB #0/).click(); await txDone(chain, 'handoff');
+      assert.equal(chain.state.txs[1].args[0].toLowerCase(), fixtureWallets.recipient);
+    });
+  }]),
   ['worker-recipient-validation-handoff', async browser => session(browser, { scenario: 'worker', allowance: 2000n * unit }, async (page, chain) => {
     await connect(page);
     const mainAction = await page.getByTestId('action-handoff').boundingBox();
