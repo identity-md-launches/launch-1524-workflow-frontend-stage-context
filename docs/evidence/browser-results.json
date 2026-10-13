@@ -1,0 +1,265 @@
+{
+  "manifestSha256": "37c46f082f246f24ddfd6f8c33ce78e8ae14b8dcbcb93aed2e4c16b0d880f4f3",
+  "finishedAt": "2026-10-13T07:05:35.461Z",
+  "results": [
+    {
+      "engine": "chromium",
+      "name": "disconnected-mobile-and-missing-wallet",
+      "passed": true,
+      "durationMs": 1980
+    },
+    {
+      "engine": "chromium",
+      "name": "unknown-chain-add-and-switch",
+      "passed": true,
+      "durationMs": 1428
+    },
+    {
+      "engine": "chromium",
+      "name": "connection-rejection-retry",
+      "passed": true,
+      "durationMs": 1490
+    },
+    {
+      "engine": "chromium",
+      "name": "open-approval-and-confirmed-refresh",
+      "passed": true,
+      "durationMs": 2518
+    },
+    {
+      "engine": "chromium",
+      "name": "worker-recipient-validation-handoff",
+      "passed": true,
+      "durationMs": 2321
+    },
+    {
+      "engine": "chromium",
+      "name": "queue-join-leave-no-rejoin",
+      "passed": true,
+      "durationMs": 2954
+    },
+    {
+      "engine": "chromium",
+      "name": "expired-timeout-and-closed-state",
+      "passed": true,
+      "durationMs": 2550
+    },
+    {
+      "engine": "chromium",
+      "name": "claim-past-run-once",
+      "passed": true,
+      "durationMs": 2209
+    },
+    {
+      "engine": "chromium",
+      "name": "owner-one-time-setup",
+      "passed": true,
+      "durationMs": 1707
+    },
+    {
+      "engine": "chromium",
+      "name": "signature-rejection-and-contract-revert",
+      "passed": true,
+      "durationMs": 2322
+    },
+    {
+      "engine": "chromium",
+      "name": "queue-row-one-tap-handoff",
+      "passed": true,
+      "durationMs": 1941
+    },
+    {
+      "engine": "chromium",
+      "name": "pagination-retention-and-specific-bounty",
+      "passed": true,
+      "durationMs": 2929
+    },
+    {
+      "engine": "chromium",
+      "name": "stale-bounty-response-after-account-change",
+      "passed": true,
+      "durationMs": 2716
+    },
+    {
+      "engine": "chromium",
+      "name": "token-transfer-validation-and-account-change",
+      "passed": true,
+      "durationMs": 1890
+    },
+    {
+      "engine": "chromium",
+      "name": "deployment-code-and-rpc-failure-gates",
+      "passed": true,
+      "durationMs": 2327
+    },
+    {
+      "engine": "chromium",
+      "name": "failed-worker-has-no-claim",
+      "passed": true,
+      "durationMs": 1421
+    },
+    {
+      "engine": "chromium",
+      "name": "buy-quote-two-approvals-and-swap",
+      "passed": true,
+      "durationMs": 2931
+    },
+    {
+      "engine": "chromium",
+      "name": "sell-validation-quote-invalidation",
+      "passed": true,
+      "durationMs": 2293
+    },
+    {
+      "engine": "chromium",
+      "name": "rendered-accessibility-layout-and-keyboard",
+      "passed": true,
+      "durationMs": 5336
+    },
+    {
+      "engine": "webkit",
+      "name": "disconnected-mobile-and-missing-wallet",
+      "passed": true,
+      "durationMs": 2525
+    },
+    {
+      "engine": "webkit",
+      "name": "unknown-chain-add-and-switch",
+      "passed": true,
+      "durationMs": 1802
+    },
+    {
+      "engine": "webkit",
+      "name": "connection-rejection-retry",
+      "passed": true,
+      "durationMs": 2307
+    },
+    {
+      "engine": "webkit",
+      "name": "open-approval-and-confirmed-refresh",
+      "passed": true,
+      "durationMs": 2968
+    },
+    {
+      "engine": "webkit",
+      "name": "worker-recipient-validation-handoff",
+      "passed": true,
+      "durationMs": 3113
+    },
+    {
+      "engine": "webkit",
+      "name": "queue-join-leave-no-rejoin",
+      "passed": true,
+      "durationMs": 3683
+    },
+    {
+      "engine": "webkit",
+      "name": "expired-timeout-and-closed-state",
+      "passed": true,
+      "durationMs": 2567
+    },
+    {
+      "engine": "webkit",
+      "name": "claim-past-run-once",
+      "passed": true,
+      "durationMs": 2993
+    },
+    {
+      "engine": "webkit",
+      "name": "owner-one-time-setup",
+      "passed": true,
+      "durationMs": 2610
+    },
+    {
+      "engine": "webkit",
+      "name": "signature-rejection-and-contract-revert",
+      "passed": true,
+      "durationMs": 3253
+    },
+    {
+      "engine": "webkit",
+      "name": "queue-row-one-tap-handoff",
+      "passed": true,
+      "durationMs": 4185
+    },
+    {
+      "engine": "webkit",
+      "name": "pagination-retention-and-specific-bounty",
+      "passed": true,
+      "durationMs": 4732
+    },
+    {
+      "engine": "webkit",
+      "name": "stale-bounty-response-after-account-change",
+      "passed": true,
+      "durationMs": 3550
+    },
+    {
+      "engine": "webkit",
+      "name": "token-transfer-validation-and-account-change",
+      "passed": true,
+      "durationMs": 2753
+    },
+    {
+      "engine": "webkit",
+      "name": "deployment-code-and-rpc-failure-gates",
+      "passed": true,
+      "durationMs": 3735
+    },
+    {
+      "engine": "webkit",
+      "name": "failed-worker-has-no-claim",
+      "passed": true,
+      "durationMs": 1881
+    },
+    {
+      "engine": "webkit",
+      "name": "buy-quote-two-approvals-and-swap",
+      "passed": true,
+      "durationMs": 3666
+    },
+    {
+      "engine": "webkit",
+      "name": "sell-validation-quote-invalidation",
+      "passed": true,
+      "durationMs": 3038
+    },
+    {
+      "engine": "webkit",
+      "name": "rendered-accessibility-layout-and-keyboard",
+      "passed": true,
+      "durationMs": 7443
+    }
+  ],
+  "observations": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "actionBottom": 768.59375,
+      "liveBarTop": 805
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "actionBottom": 768,
+      "liveBarTop": 805
+    }
+  ],
+  "engineVersions": {
+    "chromium": "145.0.7632.6",
+    "webkit": "26.0"
+  },
+  "passed": 38,
+  "total": 38,
+  "axeViolations": {
+    "chromium": 0,
+    "webkit": 0
+  },
+  "screenshotContext": {
+    "live-390.png": "Real production page; public-RPC state; disconnected wallet; owner setup pending.",
+    "live-1440.png": "Real production page; public-RPC state; disconnected wallet; owner setup pending.",
+    "worker-390-mocked.png": "Production page with isolated mocked running-worker JSON-RPC and wallet.",
+    "worker-1440-mocked.png": "Production page with isolated mocked running-worker JSON-RPC and wallet.",
+    "keyboard-focus-390.png": "WebKit keyboard focus in explicitly mocked running-worker state."
+  }
+}

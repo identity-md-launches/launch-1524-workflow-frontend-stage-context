@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-10-13T06:57:52.291Z",
+  "browser": "145.0.7632.6",
+  "mode": "Read-only HTTP JSON-RPC from Chromium; no wallet, no signatures, no transactions.",
+  "endpoints": [
+    {
+      "endpoint": "https://ethereum-rpc.publicnode.com",
+      "results": {
+        "chainId": "1",
+        "blockNumber": "26181922",
+        "LaunchToken.code": {
+          "bytes": 1722,
+          "sha256": "34c88e2345fc1b93f60ace20e3933e251f0bff4149e279544ba3a6a72459062f"
+        },
+        "JobZero.code": {
+          "bytes": 8286,
+          "sha256": "0bcd6bf38f0fbd1740443bb5e9894cfb11f3096d3d37764734b553d860deaaad"
+        },
+        "LaunchToken.name": "Teyo",
+        "LaunchToken.symbol": "TEYO",
+        "LaunchToken.decimals": 18,
+        "JobZero.owner": "0xE8BFF6587b2481008AE36b26599B9b9530669c35",
+        "JobZero.token": "0x0000000000000000000000000000000000000000",
+        "JobZero.isOpen": false,
+        "JobZero.currentRun": "0",
+        "JobZero.totalBurned": "0",
+        "JobZero.handoffFee": "1000000000000000000000",
+        "quote.IMDToTEYO": {
+          "inputAmount": "1000000000000000000",
+          "amountOut": "392515152799552868130412",
+          "gasEstimate": "86998",
+          "decimals": 18,
+          "mode": "eth_call only"
+        },
+        "quote.TEYOToIMD": {
+          "error": {
+            "code": 3,
+            "message": "execution reverted",
+            "data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344dc1ebd4d52b7f1f5d7b3b25b400a4e8d5143e39a6c9b92af289fb7d57202e5700000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "quote.TEYOToIMD.0.000001": {
+          "error": {
+            "code": 3,
+            "message": "execution reverted",
+            "data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344dc1ebd4d52b7f1f5d7b3b25b400a4e8d5143e39a6c9b92af289fb7d57202e5700000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "quote.TEYOToIMD.1000": {
+          "error": {
+            "code": 3,
+            "message": "execution reverted",
+            "data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344dc1ebd4d52b7f1f5d7b3b25b400a4e8d5143e39a6c9b92af289fb7d57202e5700000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "quote.TEYOToIMD.1000000": {
+          "error": {
+            "code": 3,
+            "message": "execution reverted",
+            "data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344dc1ebd4d52b7f1f5d7b3b25b400a4e8d5143e39a6c9b92af289fb7d57202e5700000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "stateView.getSlot0": [
+          "125270724187523965593206900",
+          -128999,
+          0,
+          12500
+        ],
+        "stateView.getLiquidity": "0"
+      }
+    },
+    {
+      "endpoint": "https://eth.drpc.org",
+      "results": {},
+      "error": "page.evaluate: Error: HTTP 500\n    at eval (eval at evaluate (:290:30), <anonymous>:3:33)\n    at async <anonymous>:316:30"
+    }
+  ],
+  "poolId": "0x4dc1ebd4d52b7f1f5d7b3b25b400a4e8d5143e39a6c9b92af289fb7d57202e57",
+  "visibleStatus": "AWAITING SETUP"
+}

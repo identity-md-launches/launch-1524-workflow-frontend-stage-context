@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-13T07:04:00.062Z",
+  "environment": {
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "dependencies": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "viem": "2.57.5"
+    },
+    "devDependencies": {
+      "@types/node": "26.6.5",
+      "@types/react": "19.3.0",
+      "@types/react-dom": "19.3.0",
+      "tsx": "4.23.15",
+      "typescript": "7.0.2",
+      "vite": "8.3.4"
+    }
+  },
+  "commands": [
+    {
+      "command": "npm --prefix web run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm --prefix web test",
+      "exitCode": 0,
+      "tests": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm --prefix web run verify",
+      "exitCode": 0
+    }
+  ],
+  "deployment": {
+    "launchId": "67c8a7ac-9551-4b19-aca5-beb9a6033b36",
+    "chainId": 1,
+    "sourceCommit": "80049f743e5c4a5f6ae0712ea24c1b6b8d8d9705",
+    "attestationHash": "fd12be4373160ddf552c30c85722fb7ad93dfabcd839631a35eec35914b86cd7",
+    "exactContractBindings": true,
+    "exactPoolKey": true,
+    "exactNetwork": true,
+    "exactWalletAddChain": true
+  },
+  "abiProvenance": [
+    {
+      "name": "LaunchToken",
+      "sourcePath": "docs/abi/LaunchToken.json",
+      "sourceCommitByteMatch": true,
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "abiPath": "abi/LaunchToken.json",
+      "bytes": 5715
+    },
+    {
+      "name": "JobZero",
+      "sourcePath": "docs/abi/JobZero.json",
+      "sourceCommitByteMatch": true,
+      "abiHash": "e2b15d872457761a7290741f6063e471b54a06d8a1550e05271c6d695d68d51e",
+      "abiPath": "abi/JobZero.json",
+      "bytes": 17958
+    }
+  ],
+  "export": {
+    "manifest": "dist/imd-deployment.json",
+    "manifestSha256": "37c46f082f246f24ddfd6f8c33ce78e8ae14b8dcbcb93aed2e4c16b0d880f4f3",
+    "manifestBytes": 3505,
+    "assetCount": 8,
+    "assetBytes": 676443,
+    "totalBytesIncludingManifest": 679948,
+    "allAssetSha256Verified": true,
+    "inventoryContainsEveryExportExceptManifest": true,
+    "relativeAssetPaths": true,
+    "assetLimit": 128,
+    "fileByteLimit": 8388608
+  },
+  "configurationReview": {
+    "runtimeSource": "dist/imd-deployment.json",
+    "loader": "web/src/config.ts",
+    "separateRuntimeAddressMap": false,
+    "runtimeAddressLiteralSearchPassed": true,
+    "abiFilesLoadedAtRuntime": true,
+    "runtimeAbiSha256AndCanonicalKeccakChecked": true,
+    "swapQuoteApprovalAddressesFrom": "manifest.network.uniswapV4",
+    "developmentConfiguration": {
+      "source": "web/vite.config.ts",
+      "sourceSha256": "5775e9e885d1fa8782be9fd295e1cb94a2716635fae5afe1c0699e08beb7e6f0",
+      "mode": "Read-only middleware serves dist/imd-deployment.json and dist/abi/*.json; the dev command builds those artifacts before starting Vite.",
+      "separateAddressOrAbiMap": false
+    }
+  },
+  "writeScopeReview": {
+    "outOfScopeChangedPaths": [],
+    "protectedTrackedFilesChanged": []
+  },
+  "limitations": [
+    "Worker checks are not an independent audit.",
+    "No live transaction was broadcast by these checks.",
+    "Publication, IPFS naming and attestation signature authentication are outside these local checks.",
+    "Browser and live-RPC evidence are recorded separately in docs/frontend-validation.md."
+  ]
+}
